@@ -8,7 +8,9 @@ namespace tcp_com
         {
             if(String.IsNullOrEmpty(args[0]) || args[0] == "client")
             {
-                string name = "Cliente";
+                Console.WriteLine("ingrese su nickname");
+
+                string name = Console.ReadLine();
                 try
                 {
                     name = args[1];

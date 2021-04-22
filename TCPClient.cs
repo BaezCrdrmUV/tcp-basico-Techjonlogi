@@ -37,7 +37,11 @@ namespace tcp_com
                 try
                 {
                     string msg = Console.ReadLine();
-                    Message newMessage = new Message(msg, Username);
+                    DateTime horaCompuesta = DateTime.Now;
+                    int hora = horaCompuesta.Hour;
+                    int minuto = horaCompuesta.Minute;
+                    string horareal = hora.ToString() + ":" + minuto.ToString();
+                    Message newMessage = new Message(msg, Username,horareal);
                     string jsonMessage = JsonConvert.SerializeObject(newMessage);
 
                     // Envío de datos
